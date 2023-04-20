@@ -1,0 +1,26 @@
+{
+  "name": "@md-parser/react",
+  "version": "0.0.1",
+  "description": "React markdown parser",
+  "type": "module",
+  "exports": "./index.jsx",
+  "repository": "git@github.com:md-parser/react.git",
+  "author": "Dillon Parfitt <dparfitt@xebia.com>",
+  "license": "MIT",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc && cp package.json dist/package.json"
+  },
+  "devDependencies": {
+    "@saartje87/md-ast": "^0.4.4",
+    "@types/react": "^18.0.37",
+    "react": "^18.2.0",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "@saartje87/md-ast": "^0.4.4",
+    "react": "^18.2.0"
+  }
+}
