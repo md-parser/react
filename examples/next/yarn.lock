@@ -97,6 +97,11 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@md-parser/react@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@md-parser/react/-/react-0.0.3.tgz#a2df0dd3c8923e3edbb6492c6340359d280b7162"
+  integrity sha512-d84lGGkvOsTqwODIvJK21+qsocMK9Dl1D7dkRmHjbF7zxMnEsoOvPtwXQJ5UmIvcV4g4ZSjU/s/u48f1BfXuEw==
+
 "@next/env@13.3.0":
   version "13.3.0"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.3.0.tgz#cc2e49f03060a4684ce7ec7fd617a21bc5b9edba"
@@ -191,6 +196,11 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
   integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
+
+"@saartje87/md-ast@^0.4.4":
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/@saartje87/md-ast/-/md-ast-0.4.4.tgz#6b5ea3aa1b5c7db1a7ed5994212593efca329498"
+  integrity sha512-7xUm7/USbNxycSei9Jng9CtVxDKfPLNboqZRgrCBM1jOpKzXfA3juxEqsHx55zmcN69fT/holw1KIjwD76km/g==
 
 "@swc/helpers@0.4.14":
   version "0.4.14"

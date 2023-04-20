@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import { MarkdownRenderer } from '../../../..';
+import { MarkdownRenderer } from '@md-parser/react';
 import { components } from '../components/Renderers';
 import fs from 'node:fs';
 import path from 'node:path';
