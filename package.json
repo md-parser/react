@@ -1,6 +1,6 @@
 {
   "name": "@md-parser/react",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "React markdown parser",
   "type": "module",
   "exports": "./index.js",
@@ -12,7 +12,7 @@
   "author": "Dillon Parfitt <dparfitt@xebia.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc && cp package.json dist/package.json",
+    "build": "tsc && cp package.json dist/package.json && cp README.md dist/README.md",
     "ts": "tsc --noemit --project ./tsconfig.json",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "fmt": "prettier --write ."

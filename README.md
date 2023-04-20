@@ -4,13 +4,12 @@ This package provides a utility for converting Markdown AST nodes to React nodes
 
 ## Installation
 
-```sh
-npm install @md-parser/react @saartje87/md-ast
-```
+````sh
+npm install @md-parser/react
 
 ```sh
-yarn add @md-parser/react @saartje87/md-ast
-```
+yarn add @md-parser/react
+````
 
 ## Usage
 
