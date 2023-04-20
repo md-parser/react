@@ -5,24 +5,23 @@ import {
   ElementType,
   PropsWithRef,
   ReactElement,
-} from "react";
+} from 'react';
 
 export type PolymorphicComponentProps<
   Component extends ElementType,
-  Props = object
+  Props = object,
 > = ComponentPropsWithoutRef<Component> & {
   as?: Component;
 } & Props;
 
-export type PolymorphicComponentRef<Component extends ElementType> =
-  PropsWithRef<ComponentProps<Component>>["ref"];
+export type PolymorphicComponentRef<Component extends ElementType> = PropsWithRef<
+  ComponentProps<Component>
+>['ref'];
 
-export type PolymorphicComponent<Props = object> = <
-  Component extends ElementType
->(
+export type PolymorphicComponent<Props = object> = <Component extends ElementType>(
   props: PolymorphicComponentProps<Component, Props> & {
-    ref?: ComponentPropsWithRef<Component>["ref"];
-  }
+    ref?: ComponentPropsWithRef<Component>['ref'];
+  },
 ) => ReactElement | null;
 
 // ---
@@ -31,4 +30,4 @@ export type PolymorphicComponent<Props = object> = <
 // type ButtonProps = { my: 'props' } & SantizePolymorphicProps<BoxProps>;
 // ---
 
-export type SantizePolymorphicProps<T> = Omit<T, "as" | "ref">;
+export type SantizePolymorphicProps<T> = Omit<T, 'as' | 'ref'>;

@@ -1,126 +1,87 @@
-import { Box } from "./Box";
-import type { MarkdownComponents } from "../../../../";
+import { Box } from './Box';
+import type { MarkdownComponents } from '../../../../';
 
 const headingClasses = {
-  1: "text-4xl font-bold",
-  2: "text-3xl font-bold",
-  3: "text-2xl font-bold",
-  4: "text-xl font-bold",
-  5: "text-lg font-bold",
-  6: "text-base font-bold",
+  1: 'text-4xl font-bold',
+  2: 'text-3xl font-bold',
+  3: 'text-2xl font-bold',
+  4: 'text-xl font-bold',
+  5: 'text-lg font-bold',
+  6: 'text-base font-bold',
 };
 
-const HeadingRenderer: MarkdownComponents["heading"] = ({
-  children,
-  level,
-}) => (
+const HeadingRenderer: MarkdownComponents['heading'] = ({ children, level }) => (
   <Box as={`h${level}`} className={headingClasses[level]}>
     {children}
   </Box>
 );
 
-const ParagraphRenderer: MarkdownComponents["paragraph"] = ({ children }) => (
+const ParagraphRenderer: MarkdownComponents['paragraph'] = ({ children }) => (
   <Box as="p">{children}</Box>
 );
 
-const BlockquoteRenderer: MarkdownComponents["blockquote"] = ({ children }) => (
+const BlockquoteRenderer: MarkdownComponents['blockquote'] = ({ children }) => (
   <Box as="blockquote">{children}</Box>
 );
 
-const LinkRenderer: MarkdownComponents["link"] = ({
-  children,
-  href,
-  title,
-}) => (
+const LinkRenderer: MarkdownComponents['link'] = ({ children, href, title }) => (
   <Box as="a" href={href} title={title}>
     {children}
   </Box>
 );
 
-const ListRenderer: MarkdownComponents["list"] = ({
-  children,
-  ordered,
-  start,
-}) => (
-  <Box as={ordered ? "ol" : "ul"} start={start} style={{ margin: 0 }}>
+const ListRenderer: MarkdownComponents['list'] = ({ children, ordered, start }) => (
+  <Box as={ordered ? 'ol' : 'ul'} start={start} style={{ margin: 0 }}>
     {children}
   </Box>
 );
 
-const ListItemRenderer: MarkdownComponents["listItem"] = ({ children }) => (
-  <li>{children}</li>
+const ListItemRenderer: MarkdownComponents['listItem'] = ({ children }) => <li>{children}</li>;
+
+const ImageRenderer: MarkdownComponents['image'] = ({ alt, src, title }) => (
+  <Box loading="lazy" as="img" src={src} alt={alt} title={title} width={700} height={500} />
 );
 
-const ImageRenderer: MarkdownComponents["image"] = ({ alt, src, title }) => (
-  <Box
-    loading="lazy"
-    as="img"
-    src={src}
-    alt={alt}
-    title={title}
-    width={700}
-    height={500}
-  />
+const StrongRenderer: MarkdownComponents['strong'] = ({ children }) => <strong>{children}</strong>;
+
+const ItalicRenderer: MarkdownComponents['italic'] = ({ children }) => <em>{children}</em>;
+
+const StrikeThroughRenderer: MarkdownComponents['strikeThrough'] = ({ children }) => (
+  <del>{children}</del>
 );
 
-const StrongRenderer: MarkdownComponents["strong"] = ({ children }) => (
-  <strong>{children}</strong>
+const SubscriptRenderer: MarkdownComponents['subscript'] = ({ children }) => <sub>{children}</sub>;
+
+const SuperscriptRenderer: MarkdownComponents['superscript'] = ({ children }) => (
+  <sup>{children}</sup>
 );
 
-const ItalicRenderer: MarkdownComponents["italic"] = ({ children }) => (
-  <em>{children}</em>
-);
+const CodeRenderer: MarkdownComponents['code'] = ({ value }) => <pre>{value}</pre>;
 
-const StrikeThroughRenderer: MarkdownComponents["strikeThrough"] = ({
-  children,
-}) => <del>{children}</del>;
+const InlineCodeRenderer: MarkdownComponents['inlineCode'] = ({ value }) => <code>{value}</code>;
 
-const SubscriptRenderer: MarkdownComponents["subscript"] = ({ children }) => (
-  <sub>{children}</sub>
-);
-
-const SuperscriptRenderer: MarkdownComponents["superscript"] = ({
-  children,
-}) => <sup>{children}</sup>;
-
-const CodeRenderer: MarkdownComponents["code"] = ({ value }) => (
-  <pre>{value}</pre>
-);
-
-const InlineCodeRenderer: MarkdownComponents["inlineCode"] = ({ value }) => (
-  <code>{value}</code>
-);
-
-const TableRenderer: MarkdownComponents["table"] = ({ header, rows }) => (
+const TableRenderer: MarkdownComponents['table'] = ({ header, rows }) => (
   <table className="table-fixed">
     <thead>{header}</thead>
     <tbody>{rows}</tbody>
   </table>
 );
 
-const TableRowRenderer: MarkdownComponents["tableRow"] = ({ children }) => (
-  <tr>{children}</tr>
-);
+const TableRowRenderer: MarkdownComponents['tableRow'] = ({ children }) => <tr>{children}</tr>;
 
-const TableHeaderRenderer: MarkdownComponents["tableHeader"] = ({
-  children,
-  align,
-}) => (
+const TableHeaderRenderer: MarkdownComponents['tableHeader'] = ({ children, align }) => (
   <Box as="th" style={{ textAlign: align }}>
     {children}
   </Box>
 );
 
-const TableDataRenderer: MarkdownComponents["tableData"] = ({
-  children,
-  align,
-}) => (
+const TableDataRenderer: MarkdownComponents['tableData'] = ({ children, align }) => (
   <Box as="td" style={{ textAlign: align }}>
     {children}
   </Box>
 );
 
-const DividerRenderer: MarkdownComponents["divider"] = () => <hr />;
+const DividerRenderer: MarkdownComponents['divider'] = () => <hr />;
 
 export const components: MarkdownComponents = {
   heading: HeadingRenderer,

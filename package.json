@@ -11,13 +11,23 @@
     "dist/"
   ],
   "scripts": {
-    "build": "tsc && cp package.json dist/package.json"
+    "build": "tsc && cp package.json dist/package.json",
+    "ts": "tsc --noemit --project ./tsconfig.json",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "fmt": "prettier --write ."
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
     "@saartje87/md-ast": "^0.4.4",
     "@types/react": "^18.0.37",
     "react": "^18.2.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "prettier": "^2.8.7",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unicorn": "^46.0.0"
   },
   "peerDependencies": {
     "@saartje87/md-ast": "^0.4.4",
