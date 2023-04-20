@@ -16,7 +16,7 @@ yarn add @md-parser/react @saartje87/md-ast
 
 ### Define components
 
-See the components defined in the [examples](examples/next/components/Renderers.tsx ':include :type=code typescript')
+See the components defined in the [examples](examples/next/src/components/Renderers.tsx ':include :type=code typescript')
 
 ```tsx
 import { MarkdownRenderer } from '@md-parser/react';
