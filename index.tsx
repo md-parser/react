@@ -17,7 +17,7 @@ export type MarkdownComponents = {
   heading: FC<MapMarkdownNodeToReactNode<MarkdownNode>['heading']>;
   image: FC<MapMarkdownNodeToReactNode<MarkdownNode>['image']>;
   inlineCode: FC<MapMarkdownNodeToReactNode<MarkdownNode>['inlineCode']>;
-  italic: FC<MapMarkdownNodeToReactNode<MarkdownNode>['italic']>;
+  emphasis: FC<MapMarkdownNodeToReactNode<MarkdownNode>['emphasis']>;
   link: FC<MapMarkdownNodeToReactNode<MarkdownNode>['link']>;
   list: FC<MapMarkdownNodeToReactNode<MarkdownNode>['list']>;
   listItem: FC<MapMarkdownNodeToReactNode<MarkdownNode>['listItem']>;
@@ -166,7 +166,7 @@ export const MarkdownASTRenderer: FC<MarkdownASTRendererProps> = ({
         }
         case 'paragraph':
         case 'strong':
-        case 'italic':
+        case 'emphasis':
         case 'strikeThrough':
         case 'subscript':
         case 'superscript':

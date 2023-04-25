@@ -95,10 +95,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@saartje87/md-ast@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@saartje87/md-ast/-/md-ast-0.4.4.tgz#6b5ea3aa1b5c7db1a7ed5994212593efca329498"
-  integrity sha512-7xUm7/USbNxycSei9Jng9CtVxDKfPLNboqZRgrCBM1jOpKzXfA3juxEqsHx55zmcN69fT/holw1KIjwD76km/g==
+"@saartje87/md-ast@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@saartje87/md-ast/-/md-ast-0.6.1.tgz#37fc260c373499488db896291b96c1c17229be37"
+  integrity sha512-0rRz7RCn9pABdXQNuOeaV3RDLLc51S0Kt/tg5aJFyvhNA1v3zRYqnR2grhI21Qrt76XhuBuUbF6U1t11Kipyxg==
 
 "@types/json-schema@^7.0.9":
   version "7.0.11"

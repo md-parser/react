@@ -19,9 +19,9 @@ See the components defined in the [examples](examples/next/src/components/Render
 
 ```tsx
 import { MarkdownRenderer } from '@md-parser/react';
-import {components } from './components';
+import { components } from './components';
 
 export const Markdown = ({ markdown }: { markdown: string }) => (
-    <MarkdownRenderer components={components}>{markdown}</MarkdownRenderer>;
+  <MarkdownRenderer components={components}>{markdown}</MarkdownRenderer>;
 )
 ```

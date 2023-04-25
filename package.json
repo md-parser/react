@@ -18,19 +18,19 @@
     "fmt": "prettier --write ."
   },
   "dependencies": {
-    "@saartje87/md-ast": "^0.4.4"
+    "@saartje87/md-ast": "^0.6.1"
   },
   "devDependencies": {
+    "@types/react": "^18.0.37",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
-    "@types/react": "^18.0.37",
-    "react": "^18.2.0",
-    "typescript": "^5.0.4",
-    "prettier": "^2.8.7",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-unicorn": "^46.0.0"
+    "eslint-plugin-unicorn": "^46.0.0",
+    "prettier": "^2.8.7",
+    "react": "^18.2.0",
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
     "react": "^18.2.0"
