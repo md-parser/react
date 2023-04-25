@@ -1,4 +1,4 @@
-import { parseMarkdown, MarkdownNode } from '@saartje87/md-ast';
+import { parseMarkdown, MarkdownNode } from '@md-parser/parser';
 import { FC, Fragment, ReactNode } from 'react';
 
 export type MapMarkdownNodeToReactNode<T extends MarkdownNode> = {

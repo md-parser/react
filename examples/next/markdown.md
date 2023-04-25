@@ -83,4 +83,4 @@ alert(message);
 
 ## Inline code
 
-Markdown is parsed by `@saartje87/md-ast`.
+Markdown is parsed by `@md-parser/parser`.
