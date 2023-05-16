@@ -1,5 +1,11 @@
 # @md-parser/react
 
+## 0.3.3
+
+### Patch Changes
+
+- 948809b: fix publishing of dist folder
+
 ## 0.3.2
 
 ### Patch Changes
