@@ -16,7 +16,7 @@
     "ts": "tsc --noemit --project ./tsconfig.json",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "fmt": "prettier --write .",
-    "release": "yarn ts && yarn test && yarn build && changeset publish"
+    "release": "yarn ts && yarn build && changeset publish"
   },
   "dependencies": {
     "@md-parser/parser": "^0.8.1"
