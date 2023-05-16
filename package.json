@@ -1,6 +1,6 @@
 {
   "name": "@md-parser/react",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React markdown parser",
   "type": "module",
   "exports": "./index.js",
