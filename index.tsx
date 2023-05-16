@@ -35,12 +35,19 @@ export type MarkdownComponents = {
 export type MarkdownRendererProps = {
   children: string;
   components: Partial<MarkdownComponents>;
+  debug?: boolean;
+  logger?: (message: string) => void;
 };
 
-export const MarkdownRenderer: FC<MarkdownRendererProps> = ({ children, components }) => {
+export const MarkdownRenderer: FC<MarkdownRendererProps> = ({
+  children,
+  components,
+  debug,
+  logger,
+}) => {
   const ast = parseMarkdown(children || '');
 
-  return <MarkdownASTRenderer nodes={ast} components={components} />;
+  return <MarkdownASTRenderer nodes={ast} components={components} debug={debug} logger={logger} />;
 };
 
 export type MarkdownASTRendererProps = {
