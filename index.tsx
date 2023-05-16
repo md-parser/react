@@ -1,4 +1,4 @@
-import { parseMarkdown, MarkdownNode } from '@md-parser/parser';
+import { parseMarkdown, MarkdownNode, ParserConfig } from '@md-parser/parser';
 import { FC, Fragment, ReactNode } from 'react';
 
 export type MapMarkdownNodeToReactNode<T extends MarkdownNode> = {
@@ -37,15 +37,16 @@ export type MarkdownRendererProps = {
   components: Partial<MarkdownComponents>;
   debug?: boolean;
   logger?: (message: string) => void;
-};
+} & ParserConfig;
 
 export const MarkdownRenderer: FC<MarkdownRendererProps> = ({
   children,
   components,
   debug,
   logger,
+  presets,
 }) => {
-  const ast = parseMarkdown(children || '');
+  const ast = parseMarkdown(children || '', { presets });
 
   return <MarkdownASTRenderer nodes={ast} components={components} debug={debug} logger={logger} />;
 };
