@@ -1,5 +1,11 @@
 # @md-parser/react
 
+## 0.3.2
+
+### Patch Changes
+
+- a8efd61: Fix publishing to npm
+
 ## 0.3.1
 
 ### Patch Changes
