@@ -1,5 +1,11 @@
 # @md-parser/react
 
+## 0.3.4
+
+### Patch Changes
+
+- 045df10: Fix passing down of props
+
 ## 0.3.3
 
 ### Patch Changes
