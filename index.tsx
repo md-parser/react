@@ -48,6 +48,8 @@ export type MarkdownASTRendererProps = {
   nodes: MarkdownNode[];
   // We use this to prevent React from complaining about missing keys
   keyPrefix?: string;
+  debug?: boolean;
+  logger?: (message: string) => void;
 };
 
 const isValidRenderer = (
@@ -60,6 +62,8 @@ export const MarkdownASTRenderer: FC<MarkdownASTRendererProps> = ({
   nodes,
   components,
   keyPrefix = '',
+  debug = false,
+  logger,
 }) => (
   <>
     {nodes.map((node, index) => {
@@ -74,11 +78,19 @@ export const MarkdownASTRenderer: FC<MarkdownASTRendererProps> = ({
       }
 
       if (!isValidRenderer(components, node.type)) {
-        return (
-          <span key={key} style={{ color: 'red' }}>
-            Pass in a rendered for `{node.type}`
-          </span>
-        );
+        if (debug) {
+          return (
+            <span key={key} style={{ color: 'red' }}>
+              Pass in a rendered for `{node.type}`
+            </span>
+          );
+        }
+
+        if (logger) {
+          logger(`Pass in a rendered for \`${node.type}\``);
+        }
+
+        return null;
       }
 
       switch (node.type) {
