@@ -1,5 +1,11 @@
 # @md-parser/react
 
+## 0.4.0
+
+### Minor Changes
+
+- eab53a6: Add the presets config to the parser
+
 ## 0.3.4
 
 ### Patch Changes
