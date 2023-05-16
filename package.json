@@ -15,7 +15,8 @@
     "build": "tsc && cp package.json dist/package.json && cp README.md dist/README.md",
     "ts": "tsc --noemit --project ./tsconfig.json",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "release": "yarn ts && yarn test && yarn build && changeset publish"
   },
   "dependencies": {
     "@md-parser/parser": "^0.8.1"
@@ -30,6 +31,7 @@
     "eslint-plugin-unicorn": "^47.0.0",
     "prettier": "^2.8.7",
     "react": "^18.2.0",
+    "@changesets/cli": "^2.26.1",
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
