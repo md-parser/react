@@ -1,5 +1,11 @@
 # @md-parser/react
 
+## 0.4.1
+
+### Patch Changes
+
+- aa2c7f3: Create dependabot.yml
+
 ## 0.4.0
 
 ### Minor Changes
