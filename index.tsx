@@ -1,4 +1,4 @@
-import { parseMarkdown, MarkdownNode } from '@md-parser/parser';
+import { parseMarkdown, MarkdownNode, ParserConfig } from '@md-parser/parser';
 import { FC, Fragment, ReactNode } from 'react';
 
 export type MapMarkdownNodeToReactNode<T extends MarkdownNode> = {
@@ -36,12 +36,20 @@ export type MarkdownComponents = {
 export type MarkdownRendererProps = {
   children: string;
   components: Partial<MarkdownComponents>;
-};
+  debug?: boolean;
+  logger?: (message: string) => void;
+} & ParserConfig;
 
-export const MarkdownRenderer: FC<MarkdownRendererProps> = ({ children, components }) => {
-  const ast = parseMarkdown(children || '');
+export const MarkdownRenderer: FC<MarkdownRendererProps> = ({
+  children,
+  components,
+  debug,
+  logger,
+  presets,
+}) => {
+  const ast = parseMarkdown(children || '', { presets });
 
-  return <MarkdownASTRenderer nodes={ast} components={components} />;
+  return <MarkdownASTRenderer nodes={ast} components={components} debug={debug} logger={logger} />;
 };
 
 export type MarkdownASTRendererProps = {
@@ -49,6 +57,8 @@ export type MarkdownASTRendererProps = {
   nodes: MarkdownNode[];
   // We use this to prevent React from complaining about missing keys
   keyPrefix?: string;
+  debug?: boolean;
+  logger?: (message: string) => void;
 };
 
 const isValidRenderer = (
@@ -61,6 +71,8 @@ export const MarkdownASTRenderer: FC<MarkdownASTRendererProps> = ({
   nodes,
   components,
   keyPrefix = '',
+  debug = false,
+  logger,
 }) => (
   <>
     {nodes.map((node, index) => {
@@ -75,11 +87,19 @@ export const MarkdownASTRenderer: FC<MarkdownASTRendererProps> = ({
       }
 
       if (!isValidRenderer(components, node.type)) {
-        return (
-          <span key={key} style={{ color: 'red' }}>
-            Pass in a rendered for `{node.type}`
-          </span>
-        );
+        if (debug) {
+          return (
+            <span key={key} style={{ color: 'red' }}>
+              Pass in a rendered for `{node.type}`
+            </span>
+          );
+        }
+
+        if (logger) {
+          logger(`Pass in a rendered for \`${node.type}\``);
+        }
+
+        return null;
       }
 
       switch (node.type) {
