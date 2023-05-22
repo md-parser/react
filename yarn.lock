@@ -304,9 +304,9 @@
     read-yaml-file "^1.1.0"
 
 "@md-parser/parser@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@md-parser/parser/-/parser-0.8.1.tgz#9667fcba1fcf4774a69f46381b9874d51813b857"
-  integrity sha512-OhAPMygEOGNyiTTiv2vC4TCLQUv/dJAxUmdE9jKpD95t7si89pGd/fJwK1KCXmacMVRKEPHM0SzFyFUvTi8dCw==
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@md-parser/parser/-/parser-0.8.2.tgz#7f524b34008f894a7227865cc37127d60b0bf4fe"
+  integrity sha512-gAlGeS+AHSFsEizp4fDstd6CBYG/IcpC3usye5Ck7v4KR+il+V05hmvfQ4UB1/sJ38bn+6V1ZMOnjRYzh0u7Rg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
