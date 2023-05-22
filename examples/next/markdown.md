@@ -84,3 +84,8 @@ alert(message);
 ## Inline code
 
 Markdown is parsed by `@md-parser/parser`.
+
+## Checkbox
+
+- [x] This is a **complete** item
+- [ ] This is an **incomplete** item

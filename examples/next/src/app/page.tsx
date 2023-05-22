@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <main className={`container mx-auto px-4 ${inter.className}`}>
-      <MarkdownRenderer components={components} presets={[GFM()]}>
+      <MarkdownRenderer components={components} presets={GFM()}>
         {markdown}
       </MarkdownRenderer>
     </main>
