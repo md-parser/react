@@ -1,5 +1,15 @@
 # @md-parser/react
 
+## 1.0.0
+
+### Major Changes
+
+- 111b6e8: Italic node is renamed to emphasis
+
+### Minor Changes
+
+- 111b6e8: Added renderer for checkboxes
+
 ## 0.4.1
 
 ### Patch Changes
