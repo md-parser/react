@@ -18,7 +18,7 @@
     "fmt": "prettier --write ."
   },
   "dependencies": {
-    "@md-parser/parser": "^0.7.0"
+    "@md-parser/parser": "^0.10.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
