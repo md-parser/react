@@ -12,12 +12,13 @@ export type ConvertMarkdownNodeToReactProps<T extends MarkdownNode> = {
 
 export type MarkdownComponents = {
   blockquote: FC<MapMarkdownNodeToReactNode<MarkdownNode>['blockquote']>;
+  checkbox: FC<MapMarkdownNodeToReactNode<MarkdownNode>['checkbox']>;
   code: FC<MapMarkdownNodeToReactNode<MarkdownNode>['code']>;
   divider: FC<MapMarkdownNodeToReactNode<MarkdownNode>['divider']>;
+  emphasis: FC<MapMarkdownNodeToReactNode<MarkdownNode>['emphasis']>;
   heading: FC<MapMarkdownNodeToReactNode<MarkdownNode>['heading']>;
   image: FC<MapMarkdownNodeToReactNode<MarkdownNode>['image']>;
   inlineCode: FC<MapMarkdownNodeToReactNode<MarkdownNode>['inlineCode']>;
-  emphasis: FC<MapMarkdownNodeToReactNode<MarkdownNode>['emphasis']>;
   link: FC<MapMarkdownNodeToReactNode<MarkdownNode>['link']>;
   list: FC<MapMarkdownNodeToReactNode<MarkdownNode>['list']>;
   listItem: FC<MapMarkdownNodeToReactNode<MarkdownNode>['listItem']>;
@@ -27,9 +28,9 @@ export type MarkdownComponents = {
   subscript: FC<MapMarkdownNodeToReactNode<MarkdownNode>['subscript']>;
   superscript: FC<MapMarkdownNodeToReactNode<MarkdownNode>['superscript']>;
   table: FC<MapMarkdownNodeToReactNode<MarkdownNode>['table']>;
-  tableRow: FC<MapMarkdownNodeToReactNode<MarkdownNode>['tableRow']>;
   tableData: FC<MapMarkdownNodeToReactNode<MarkdownNode>['tableData']>;
   tableHeader: FC<MapMarkdownNodeToReactNode<MarkdownNode>['tableHeader']>;
+  tableRow: FC<MapMarkdownNodeToReactNode<MarkdownNode>['tableRow']>;
 };
 
 export type MarkdownRendererProps = {
@@ -180,6 +181,14 @@ export const MarkdownASTRenderer: FC<MarkdownASTRendererProps> = ({
           const Component = components[node.type];
           return (
             <Component key={key} align={node.align}>
+              <MarkdownASTRenderer nodes={node.children} components={components} />
+            </Component>
+          );
+        }
+        case 'checkbox': {
+          const Component = components[node.type];
+          return (
+            <Component key={key} checked={node.checked}>
               <MarkdownASTRenderer nodes={node.children} components={components} />
             </Component>
           );

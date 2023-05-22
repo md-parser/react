@@ -22,9 +22,10 @@
     "release": "yarn build && changeset publish"
   },
   "dependencies": {
-    "@md-parser/parser": "^0.8.1"
+    "@md-parser/parser": "^0.10.0"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "@types/react": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
@@ -34,7 +35,6 @@
     "eslint-plugin-unicorn": "^47.0.0",
     "prettier": "^2.8.7",
     "react": "^18.2.0",
-    "@changesets/cli": "^2.26.1",
     "typescript": "^5.0.4"
   },
   "peerDependencies": {

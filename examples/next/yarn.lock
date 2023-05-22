@@ -102,10 +102,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@md-parser/parser@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@md-parser/parser/-/parser-0.8.1.tgz#9667fcba1fcf4774a69f46381b9874d51813b857"
-  integrity sha512-OhAPMygEOGNyiTTiv2vC4TCLQUv/dJAxUmdE9jKpD95t7si89pGd/fJwK1KCXmacMVRKEPHM0SzFyFUvTi8dCw==
+"@md-parser/parser@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@md-parser/parser/-/parser-0.10.0.tgz#9d5c95570d159ec1eab18a787322e34a9b105c7a"
+  integrity sha512-7Q4f7igsn1mx9z93fzvkIYBAQbmZs2domE0iIGrfq5yWG0sVDD7S7qtwuKTjCFtlYqowheDam5k9QPO2bvsNdw==
 
 "@next/env@13.4.2":
   version "13.4.2"

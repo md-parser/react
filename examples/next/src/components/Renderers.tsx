@@ -44,7 +44,7 @@ const ImageRenderer: MarkdownComponents['image'] = ({ alt, src, title }) => (
 
 const StrongRenderer: MarkdownComponents['strong'] = ({ children }) => <strong>{children}</strong>;
 
-const ItalicRenderer: MarkdownComponents['italic'] = ({ children }) => <em>{children}</em>;
+const ItalicRenderer: MarkdownComponents['emphasis'] = ({ children }) => <em>{children}</em>;
 
 const StrikeThroughRenderer: MarkdownComponents['strikeThrough'] = ({ children }) => (
   <del>{children}</del>
@@ -83,6 +83,13 @@ const TableDataRenderer: MarkdownComponents['tableData'] = ({ children, align })
 
 const DividerRenderer: MarkdownComponents['divider'] = () => <hr />;
 
+const CheckboxRenderer: MarkdownComponents['checkbox'] = ({ checked, children }) => (
+  <label>
+    <input type="checkbox" readOnly checked={checked} />
+    {children}
+  </label>
+);
+
 export const components: MarkdownComponents = {
   heading: HeadingRenderer,
   paragraph: ParagraphRenderer,
@@ -93,7 +100,7 @@ export const components: MarkdownComponents = {
   listItem: ListItemRenderer,
   image: ImageRenderer,
   strong: StrongRenderer,
-  italic: ItalicRenderer,
+  emphasis: ItalicRenderer,
   strikeThrough: StrikeThroughRenderer,
   subscript: SubscriptRenderer,
   superscript: SuperscriptRenderer,
@@ -103,4 +110,5 @@ export const components: MarkdownComponents = {
   tableRow: TableRowRenderer,
   tableHeader: TableHeaderRenderer,
   tableData: TableDataRenderer,
+  checkbox: CheckboxRenderer,
 };
