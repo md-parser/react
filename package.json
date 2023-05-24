@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "React markdown parser",
   "type": "module",
-  "exports": "./index.js",
-  "types": "./index.d.ts",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/md-parser/react.git"
@@ -12,10 +12,12 @@
   "author": "Dillon Parfitt <dparfitt@xebia.com>",
   "license": "MIT",
   "files": [
+    "package.json",
+    "README.md",
     "dist/"
   ],
   "scripts": {
-    "build": "tsc && cp package.json dist/package.json && cp README.md dist/README.md",
+    "build": "tsc",
     "ts": "tsc --noemit --project ./tsconfig.json",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "fmt": "prettier --write .",
