@@ -1,5 +1,11 @@
 # @md-parser/react
 
+## 1.0.1
+
+### Patch Changes
+
+- fc63531: Updated to latest @md-parser/parser
+
 ## 1.0.0
 
 ### Major Changes
