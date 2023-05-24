@@ -1,5 +1,11 @@
 # @md-parser/react
 
+## 1.0.2
+
+### Patch Changes
+
+- 8772893: Fixed typo in package.json
+
 ## 1.0.1
 
 ### Patch Changes
