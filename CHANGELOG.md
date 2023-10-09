@@ -1,5 +1,11 @@
 # @md-parser/react
 
+## 1.0.3
+
+### Patch Changes
+
+- e742464: chore: package bump and add prettierignore
+
 ## 1.0.2
 
 ### Patch Changes
